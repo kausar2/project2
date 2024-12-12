@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .animate-bounce-slow {
+            animation: bounce 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header and Navigation -->
+    <header class="bg-red-600">
+        <div class="container mx-auto flex justify-between items-center py-4">
+            <h1 class="text-2xl font-bold">Touhid Developer - Movie Platform</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#home" class="hover:underline">Home</a></li>
+                    <li><a href="#about" class="hover:underline">About</a></li>
+                    <li><a href="#movies" class="hover:underline">Movies</a></li>
+                    <li><a href="#login" class="hover:underline">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <section class="py-6 bg-gray-800">
+        <div class="container mx-auto">
+            <div class="flex justify-center">
+                <input type="text" placeholder="Search for movies..." class="w-full max-w-lg border rounded p-2">
+                <button class="ml-2 bg-red-600 text-white px-4 py-2 rounded">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Section -->
+    <section id="home" class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Welcome to the Ultimate Movie Platform</h2>
+            <p class="text-lg">Discover your next favorite movie here!</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">About Us</h2>
+            <p class="text-lg">Created by Touhid Developer, this platform brings you the latest movies, all in one place. Enjoy browsing with a sleek, responsive design.</p>
+        </div>
+    </section>
+
+    <!-- Movies Section -->
+    <section id="movies" class="py-20">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center">Movies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Movie Cards -->
+                <div class="bg-gray-800 p-4 rounded shadow-lg animate-bounce-slow">
+                    <h3 class="text-xl font-bold">Movie Title 1</h3>
+                    <p>Exciting description of the movie.</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded shadow-lg">
+                    <h3 class="text-xl font-bold">Movie Title 2</h3>
+                    <p>Exciting description of the movie.</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded shadow-lg">
+                    <h3 class="text-xl font-bold">Movie Title 3</h3>
+                    <p>Exciting description of the movie.</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded shadow-lg">
+                    <h3 class="text-xl font-bold">Movie Title 4</h3>
+                    <p>Exciting description of the movie.</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="py-20 bg-gray-800">
+        <div class="container mx-auto max-w-md bg-gray-900 p-6 rounded shadow-lg">
+            <h2 class="text-2xl font-bold mb-4 text-center">Login</h2>
+            <form action="/login" method="post">
+                <div class="mb-4">
+                    <label for="username" class="block text-gray-300">Username</label>
+                    <input type="text" id="username" name="username" class="w-full border border-gray-700 rounded p-2 bg-gray-800 text-white">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-300">Password</label>
+                    <input type="password" id="password" name="password" class="w-full border border-gray-700 rounded p-2 bg-gray-800 text-white">
+                </div>
+                <button type="submit" class="w-full bg-red-600 text-white py-2 rounded">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-red-600 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Touhid Developer. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Example JavaScript animation
+        const cards = document.querySelectorAll('.animate-bounce-slow');
+        cards.forEach(card => {
+            card.addEventListener('mouseover', () => {
+                card.classList.add('animate-pulse');
+            });
+            card.addEventListener('mouseout', () => {
+                card.classList.remove('animate-pulse');
+            });
+        });
+    </script>
+</body>
+</html>
